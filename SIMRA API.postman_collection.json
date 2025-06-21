@@ -1,0 +1,1309 @@
+{
+	"info": {
+		"_postman_id": "924a44ad-2af7-4f7c-96d1-85eaab9dd3e6",
+		"name": "SIMRA API",
+		"description": "**Sistem Informasi Manajemen Rencana Anggaran API (SIMRA API)**\n\nMenyediakan antarmuka terstruktur berbasis REST yang memungkinkan sistem frontend, aplikasi mobile, maupun layanan eksternal untuk berinteraksi dengan data rencana anggaran.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35118050",
+		"_collection_link": "https://www.postman.com/aerospace-geologist-72404510/workspace/simra-api/collection/35118050-924a44ad-2af7-4f7c-96d1-85eaab9dd3e6?action=share&source=collection_link&creator=35118050"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/accounts/signin/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"accounts",
+								"signin",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/accounts/signin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"accounts",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 23:31:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"f5f18d0b52b6d64212eab7788c4789e8a76ec526\"\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/accounts/signin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"accounts",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 23:31:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": [\n        \"This field may not be blank.\"\n    ],\n    \"password\": [\n        \"This field may not be blank.\"\n    ]\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"auauau\",\r\n    \"password\": \"uauaua\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/accounts/signin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"accounts",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 23:32:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"non_field_errors\": [\n        \"Unable to log in with provided credentials.\"\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Budgets",
+			"item": [
+				{
+					"name": "Plan Item Temps",
+					"item": [
+						{
+							"name": "Get Plan Item Temps",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Initialize Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/initialize/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"initialize",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/1/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 3000000,\r\n    \"requirement\": 3000000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/9/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"9",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 2000000,\r\n    \"requirement\": 1500000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/11/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"11",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Plans",
+					"item": [
+						{
+							"name": "Get Plans",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plans/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plans",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Plan",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Rencana Anggaran Event DKI Jakarta Bersih\",\r\n    \"description\": \"Event Udara Kita Bersih hadir dalam rangka memperingati Hari Lingkungan Hidup\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plans/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plans",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Plan",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plans/2/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plans",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Informasi Plan",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Information Plans",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plans/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plans",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Plan Items",
+					"item": [
+						{
+							"name": "Get Plan Items",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-items/?plan=1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-items",
+										""
+									],
+									"query": [
+										{
+											"key": "plan",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Plan Items",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usage\": 2750000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-items/9/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-items",
+										"9",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Catalogs",
+			"item": [
+				{
+					"name": "Groups",
+					"item": [
+						{
+							"name": "Get Groups",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Group",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Kebersihan\",\r\n    \"origin\": \"Pemprov DKI Jakarta\"\r\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Group",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Group 03\",\r\n    \"origin\": \"Origin 01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/3/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										"3",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Group",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Kendaraan\",\r\n    \"origin\": \"Pemprov DKI Jakarta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/1/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Group",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/2/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Information Groups",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Group Items",
+					"item": [
+						{
+							"name": "Get Group Items",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items?group=1&search=pickup",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items"
+									],
+									"query": [
+										{
+											"key": "group",
+											"value": "1"
+										},
+										{
+											"key": "search",
+											"value": "pickup"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Group Item",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Mobil\",\r\n    \"description\": \"Lorem Ipsum\",\r\n    \"group\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Group Item",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/8/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										"8",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Group Item",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"name\": \"Mobil Avanza Type G\",\r\n    \"description\": \"Mobil Operasional Kantor\",\r\n    \"group\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/9/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										"9",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Group Item",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/2/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
